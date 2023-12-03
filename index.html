@@ -10,6 +10,9 @@
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
 
+    <!-- Link dark mode JS file -->
+    <script defer src="./js/dark_mode.js"></script>
+
     <title>Ryan Armstrong | Portfolio</title>
 </head>
 <body>
@@ -30,12 +33,15 @@
                 <li><a href="random_cat.html">Random Cat</a></li>
             </ul>
         </nav>
+            <!-- DARK MODE TOGGLE -->
+            <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
         <!-- <hr> -->
     </header>
     <main>
         <div class="container">
         <section>
             <div class="text-container">
+            
             <h2>Welcome to my site 👋</h2>
                 <p>Welcome to my portfolio site where I'll tell you a little bit about myself, my professional 
                     experience, and what I'm working on as I build my developer skillset. Have a look around! 

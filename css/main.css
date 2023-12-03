@@ -119,7 +119,7 @@ h2 {
     align-items: center;
     margin: 10px;
     width: 500px;
-    transition: width 0.3s;
+    transition: width 0.6s;
   }
   /* Highlight selected picture */
   div.gallery:hover {
@@ -286,7 +286,6 @@ hr {
 
 /* RANDOM CAT - Button/img styling */
 #cat-button {
-  
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -337,19 +336,20 @@ hr {
 #toggle-button {
     position:fixed;
     display:inline-block;
-    top: 25vh;
-    left: 4vw;
+    /* top: 25vh; */
+    /* left: 4vw; */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    /* top: 120px; */
-    /* right: 8px; */
-    /* margin: 0; */
+    top: 32px;
+    right: 8px;
+    z-index: 1000;
+
     background-color: rgb(22, 77, 81);
     color:white;
     width: auto;
     height: auto;
     padding: 8px;
-    border-style:outset;
-    border-radius: 4px;
+    /* border-style:inset; */
+    /* border-radius: 4px; */
     font-family:Arial, Helvetica, sans-serif;
     font-size: 14px;
     cursor: pointer;
@@ -359,7 +359,7 @@ hr {
     background-color:rgb(30, 107, 113);
 }
 .dark-mode {
-    background-color: black;
+    background-color: #121212;
     color: white;
 }
 
@@ -411,12 +411,12 @@ hr {
     #hobby-list {
         width: auto;
     }
-
+    /* Adjust dark mode button */
     #toggle-button {
-        position:fixed;
-        display:inline-block;
-        top: 35vh;
-        left: 1vw;
+        width: 60px;
+        height: auto;
+        font-size: 12px;
+
     }
 }
 

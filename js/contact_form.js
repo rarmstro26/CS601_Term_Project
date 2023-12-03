@@ -116,8 +116,3 @@ function countCharacters(textarea) {
     charCount.textContent = `${textarea.value.length}/200`;
 }
 
-// Handle dark mode toggle functionality
-function darkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}

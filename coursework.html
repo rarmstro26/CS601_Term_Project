@@ -6,12 +6,15 @@
     <link rel="stylesheet" media="screen" href="./css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Lora">
+    
+    <!-- Link dark mode JS file -->
+    <script defer src="./js/dark_mode.js"></script>
+    
     <title>Ryan Armstrong | Coursework</title>
 </head>
 <body>
     <header>
         <h1 class="page-header">Coursework</h1>
-       
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -23,10 +26,12 @@
                 <li><a href="random_cat.html">Random Cat</a></li>
             </ul>
         </nav>
-        
+        <!-- DARK MODE TOGGLE -->
+        <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
     </header>
 
     <main>
+
         <!--Table with tabular data for my current BU coursework-->
         <table id="coursework">
             <caption><h2><b>BU Met Coursework - Ryan Armstrong</b></h2></caption>
