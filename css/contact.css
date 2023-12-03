@@ -1,0 +1,157 @@
+/* Primary styling for form element/container */
+
+body {
+    background-image: url('../assets/images/halloween.jpg');
+    background-size:cover;
+    background-position: center;
+    
+    /* background-repeat: no-repeat; */
+    /* opacity: .95; */
+}
+
+form {
+
+    margin: auto;
+    width: 500px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+    /* background-image: url('/halloween.jpg'); */
+    background-size: cover;
+    opacity: .9;
+    background-color: rgb(250, 248, 242);
+    font-family: Lora;
+    /* color:; */
+}
+
+/* Section headers styling */
+h2 {
+    font-family: Merriweather;
+    font-size: 16pt;
+    color: cadetblue;
+}
+
+/* Styling for input text boxes */
+.input-text {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* display: inline-block; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Error styling - error message guidance text */
+.error-message {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+    /* margin: 4pt; */
+    padding-bottom: 6px;
+    margin-left: 6pt;
+}
+
+/* Error styling - while HTML invalid on focus input */
+input:focus:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 4px;
+}
+
+/* Input field section styling */
+.input-section {
+    border-bottom: 2px solid black;
+
+}
+
+/* Style placeholder/guidance text */
+.input-text::placeholder {
+    font-style: italic;
+    color: rgb(176, 171, 171);
+}
+
+/* Radio button section styling */
+.radio-section {
+    text-align: left;
+    border-bottom: 2px solid black;
+    padding-bottom: 18px;
+}
+
+/* Checkbox section styling */
+.checkbox-section {
+    text-align: left;
+    padding-bottom: 18px;
+}
+
+#checkbox-label {
+    color: red;
+    font-style: italic;
+    /* border: 2px solid black; */
+    /* display: block; */
+    /* margin-left: 8px; */
+    margin-bottom: 6px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    box-sizing: border-box;
+    border: 1px solid cadetblue;
+    font-family: Merriweather;
+    font-size: 14px;
+
+}
+
+/* Style buttons horizontally and spaced evenly */
+.button-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+}
+
+#submit-button {
+    background-color: #59981A;
+    color: white;
+    font-weight: bold;
+    width: 45%;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#reset-button {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    width: 45%;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+/* Button styling for hover state */
+#submit-button:hover {
+    background-color: #64ad1b;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+#reset-button:hover {
+    background-color: rgb(188, 180, 180);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+/* Message text area character counter */
+#char-count {
+    text-align: right;
+}

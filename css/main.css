@@ -11,6 +11,8 @@ body {
 header {
     top: 0;
     position: sticky;
+    z-index: 1000;
+    
 }
 /* Add site-wide margin for presentation */
 main {
@@ -26,7 +28,7 @@ main {
     box-shadow: 0 0 10px black;
     text-align: center;
     font-family: Merriweather, serif;
-    font-size: 46px;
+    /* font-size: 46px; */
     height: 65px;
     color:#88bdbc;
 }
@@ -55,6 +57,7 @@ nav a {
     text-decoration: none;
     display: inline-block;
     font-size: 14pt;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 /* Button link state formatting */
@@ -67,15 +70,25 @@ a:link {
   a:hover {
     color:black;
     background-color:#88BDBC;
+    border-radius: 2px;
+    /* font-size: 21px; */
     /* text-decoration:double; */
+    }
+
+  a:visited {
+    color:#d1d7e0;
+    text-decoration: none;
     }
 
   a.active {
     background-color: #88BDBC;
-    color: #112D32;
-    font-size:21px;
+    color: rgb(8, 53, 66);
+    /* font-size:21px; */
     font-weight: bolder;
-    }
+    border-radius: 2px;
+  }
+
+ 
 
 /* Page title h2 header formatting */
 h2 {
@@ -96,35 +109,39 @@ h2 {
     border:#112D32 2px solid;
 }
 
-/* Image gallery formatting for home/about pages */
+/* IMAGE GALLERY - formatting for home/about pages */
 .gallery-wrapper {
     display: flex;
+    justify-content: center;
 }
 
   div.gallery {
     align-items: center;
     margin: 10px;
     width: 500px;
+    transition: width 0.3s;
   }
   /* Highlight selected picture */
   div.gallery:hover {
     border: 1px solid #777;
-    background-color: #88BDBC;
+    background-color: #c6dfde;
     color: black;
-    width: 550px;
+    width: 475px;
   }
   
   div.gallery img {
-    width: 500px;
+    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
   }
   /* Description text */
   div.desc {
-    padding: 15px;
+    padding: 10px;
+    margin-top: 0;
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-family:Lora;
   }
 
 /* Image formatting for responsive images */
@@ -142,7 +159,35 @@ img {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding: 8px;
+    margin-bottom: 8px; 
 }
+
+/* Flexbox setup for Career page 2 column image/text layout */
+.work-experience {
+    display: flex; /* Use Flexbox */
+    align-items: flex-start; /* Align items at the start of the flex container */
+  }
+  
+  .images-column {
+    flex: 0 0 auto; /* Set images column width to its content */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Arrange images in a column */
+  }
+  
+  .text-column {
+    flex: 1; /* Let text column take remaining space */
+    padding-left: 20px; /* Adjust the space between columns */
+  }
+  
+  .img-career {
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 16px;
+    margin-bottom: 8px; 
+  }
 
 /* Formatting for embedded youtube videos */
 iframe {
@@ -152,9 +197,23 @@ iframe {
     background-color:#88BDBC;
     padding: 5px;
     /* Move style/size from html > css */
-    width: 450px;
+    width: 550px;
     height: 315px;
-    display: inline-block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Format iframe for embedded resume PDF */
+#resume {
+    width: 75%;
+    height: 100vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px outset #112D32;
+    border-radius:2px;
 }
 
 /* Unique list styling for About page */
@@ -209,7 +268,7 @@ hr {
 }
   
   #coursework tr:hover {
-    background-color: blanchedalmond
+    background-color: rgb(187, 179, 167);
 }
 
   #coursework tfoot {
@@ -225,20 +284,90 @@ hr {
     color: white;
 }
 
+/* RANDOM CAT - Button/img styling */
+#cat-button {
+  
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    /* top: 120px; */
+    /* right: 8px; */
+    /* margin: 0; */
+    background-color: rgb(22, 77, 81);
+    color:white;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    border-style:outset;
+    border-radius: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#cat-button:hover {
+    background-color:rgb(30, 107, 113);
+}
+
+#random-cat {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+}
+
 /* Style a button for LinkedIn link on Career page*/
 #linkedin-button {
     color: #0077b5;
     font-size: 24px;
+    border: none;
+    background-color: #e9e6e6;
     border-radius: 5px;
     cursor: pointer;
 }
+#linkedin-button:hover {
+    background-color: rgb(227, 222, 222);
+}
+
+/* Styling for dark mode */
+
+#toggle-button {
+    position:fixed;
+    display:inline-block;
+    top: 25vh;
+    left: 4vw;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    /* top: 120px; */
+    /* right: 8px; */
+    /* margin: 0; */
+    background-color: rgb(22, 77, 81);
+    color:white;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    border-style:outset;
+    border-radius: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#toggle-button:hover {
+    background-color:rgb(30, 107, 113);
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
 
 /* MEDIA QUERIES - BREAKPOINTS */
-
 /* Small/tablet screen */
 @media screen and (max-width: 992px){
     body {
-        background-color: rgba(24, 119, 120, 0.942);
+        /* background-color: rgba(24, 119, 120, 0.942); */
         color: #0e0d0d;
         
     }
@@ -255,8 +384,8 @@ hr {
 /* Mobile screen */
 @media screen and (max-width: 600px){
     body {
-        background-color: rgb(3, 25, 25);
-        color: white;
+        /* background-color: rgb(3, 25, 25); */
+        /* color: white; */
         /* text-align: center; */
     }
     /* Adjust page header size/font */
@@ -282,6 +411,13 @@ hr {
     #hobby-list {
         width: auto;
     }
+
+    #toggle-button {
+        position:fixed;
+        display:inline-block;
+        top: 35vh;
+        left: 1vw;
+    }
 }
 
 /* Site footer styling to match header and top border */
@@ -296,3 +432,4 @@ footer{
     color: #88BDBC;
     font-weight:bold;
 }
+
