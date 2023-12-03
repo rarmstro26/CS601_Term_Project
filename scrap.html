@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>HTML5 Canvas</title>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<canvas id="myFirstCanvas" width="500" height="500">
+If you are reading this, your browser does 
+ not support the HTML5 canvas element. Sorry! 
+</canvas>
+<script type="text/javascript">
+  var obj = document.getElementById("myFirstCanvas");
+  var box =  obj.getContext("2d");
+  var circle =  obj.getContext("2d");
+
+  box.fillStyle ="black";
+  box.fillRect(0,0,150,75); 
+  cirtle.fillStyle = "red";
+  circle.beginPath();
+  circle.arc(200, 100, 100, 0, Math.Pi*2, true);
+  circle.closePath();
+  circle.fill();
+ </script>
+</body>
+</html>

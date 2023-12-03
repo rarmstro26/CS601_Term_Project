@@ -1,0 +1,298 @@
+p, #hobby-list, #contact-list,figcaption, nav a {
+    font-family:Lora, serif;
+    font-size: 18px;
+}
+
+/* Site background color */
+body {
+    background: #f7f9fbf7;
+}
+/* Enable sticky header/nav behavior */
+header {
+    top: 0;
+    position: sticky;
+}
+/* Add site-wide margin for presentation */
+main {
+    margin: 50px;
+}
+
+/* Style top page h1 header */
+.page-header{
+    font-size: 3em;
+    margin: 0;
+    background-color: #112D32;
+    padding: 10px; 
+    box-shadow: 0 0 10px black;
+    text-align: center;
+    font-family: Merriweather, serif;
+    font-size: 46px;
+    height: 65px;
+    color:#88bdbc;
+}
+
+/* Navigation menu styling */
+nav ul {
+    /* Top horizontal nav */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #4F4A41;
+    border-bottom: 2px ridge black;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+/* Set horizontal nav buttons */
+nav li {
+    display: inline;
+}
+
+/* Centered horizontal navigation buttons */
+nav a {
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14pt;
+}
+
+/* Button link state formatting */
+a:link {
+    color:#d1d7e0;
+    /* text-decoration:underline; */
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  */
+}  
+
+  a:hover {
+    color:black;
+    background-color:#88BDBC;
+    /* text-decoration:double; */
+    }
+
+  a.active {
+    background-color: #88BDBC;
+    color: #112D32;
+    font-size:21px;
+    font-weight: bolder;
+    }
+
+/* Page title h2 header formatting */
+h2 {
+    font-family: Merriweather, serif;
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: center;
+    color:cadetblue;
+}
+/* Special styling for home page text block */
+#home-coding-text {
+    margin: 0px 50px 25px;
+    /* box-sizing: border-box; */
+    background: #6E6658;
+    color:whitesmoke;
+    padding: 2px 15px 2px;
+    border:#112D32 2px solid;
+}
+
+/* Image gallery formatting for home/about pages */
+.gallery-wrapper {
+    display: flex;
+}
+
+  div.gallery {
+    align-items: center;
+    margin: 10px;
+    width: 500px;
+  }
+  /* Highlight selected picture */
+  div.gallery:hover {
+    border: 1px solid #777;
+    background-color: #88BDBC;
+    color: black;
+    width: 550px;
+  }
+  
+  div.gallery img {
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Description text */
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+/* Image formatting for responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display:inline-block;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Image styling variation for centered images */
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Formatting for embedded youtube videos */
+iframe {
+    /* Create a container for player */
+    border: 4px outset #112D32;
+    border-radius:4px;
+    background-color:#88BDBC;
+    padding: 5px;
+    /* Move style/size from html > css */
+    width: 450px;
+    height: 315px;
+    display: inline-block;
+}
+
+/* Unique list styling for About page */
+#hobby-list {
+    list-style-type:square;
+    background: #ddd;
+    border-style: outset;
+    border-width: 4px;
+    margin-left: 8px;
+    width: 25%;
+    border-radius: 5px;
+}
+/* Style page breaks Contact page */
+hr {
+    border: 10px solid #112D32;
+    border-radius: 5px;
+}
+/* Style definition list on Contact page */
+#contact-list dt {
+    font-style: italic;
+    font-weight: bolder;
+}
+  #contact-list dd {
+    padding: 10px;
+    text-indent: 28px;
+}
+
+/* Google Icon experiments */
+.material-symbols-outlined {
+    font-size: 36px;
+}
+
+/* Coursework page table design */
+#coursework {
+    border-collapse: collapse;
+    width: 85%;
+    /* Auto-center table - responsive */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+}
+
+  #coursework td, #coursework th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Inspired by W3 school advanced table example */
+  #coursework tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+  
+  #coursework tr:hover {
+    background-color: blanchedalmond
+}
+
+  #coursework tfoot {
+    font-weight: bold;
+    font-style: italic;
+}
+  
+  #coursework th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+}
+
+/* Style a button for LinkedIn link on Career page*/
+#linkedin-button {
+    color: #0077b5;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES - BREAKPOINTS */
+
+/* Small/tablet screen */
+@media screen and (max-width: 992px){
+    body {
+        background-color: rgba(24, 119, 120, 0.942);
+        color: #0e0d0d;
+        
+    }
+    .page-header {
+        font-size: 34px;
+        height:fit-content;
+    }
+    nav a {
+        padding: 10px 20px;
+
+    }
+}
+
+/* Mobile screen */
+@media screen and (max-width: 600px){
+    body {
+        background-color: rgb(3, 25, 25);
+        color: white;
+        /* text-align: center; */
+    }
+    /* Adjust page header size/font */
+    .page-header {
+        font-size: 20px;
+        height: fit-content;
+    }
+    p {
+        font-size: 12pt;
+    }
+    /* Adjust youtube video player size */
+    iframe {
+        max-width: 90%;
+    }
+    /* Switch to vertical nav and condense */
+    nav a {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+    }
+    /* Adjust about page list to fit */
+    #hobby-list {
+        width: auto;
+    }
+}
+
+/* Site footer styling to match header and top border */
+footer{
+    border-top: 2px ridge #88BDBC;
+    border-top-width: 4px;
+    text-align:center;
+    background-color: #112D32;
+    padding: 10px;
+    height: 50px;
+    font-family: Merriweather;
+    color: #88BDBC;
+    font-weight:bold;
+}

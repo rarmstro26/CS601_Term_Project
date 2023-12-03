@@ -1,0 +1,49 @@
+body {
+    margin:0;
+    padding:0;
+    color: black;
+    background: #C0C0C0;
+    font-size: 18px;
+   }
+   #wrapper {
+    width: 90%;
+    margin:0 auto;
+    background:#99c;
+   }
+ .page-header {
+    padding:5px 10px 5px 10px;
+    background:#000000;
+    color:#FFFFFF;
+   }
+
+h1 {
+    margin:0;
+   }
+
+.main {
+    float: right;
+    width:66%;
+    padding:10px;
+    background:#FFFFFF;
+    height: 2000px;
+   }
+
+nav {
+    margin: 0;
+    float: left;
+    width:25%;
+    padding:10px;
+    background:#36F;
+    height: 2000px;
+    color: #FF9933;
+   }
+
+P, h2{
+    padding-left:15px
+   }
+
+#footer {
+    clear: both;
+    background: #FFFF00;
+    width:100%
+   }
