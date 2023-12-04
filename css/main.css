@@ -5,7 +5,10 @@ p, #hobby-list, #contact-list,figcaption, nav a {
 
 /* Site background color */
 body {
-    background: #f7f9fbf7;
+    background: #eae7dcb8;
+    /* background: #d1e8e2; */
+    /* background: #ececec; */
+    /* background: #edeae5; */
 }
 /* Enable sticky header/nav behavior */
 header {
@@ -28,9 +31,10 @@ main {
     box-shadow: 0 0 10px black;
     text-align: center;
     font-family: Merriweather, serif;
+    /* font-family: Playfair; */
     /* font-size: 46px; */
     height: 65px;
-    color:#88bdbc;
+    color:#88BDBC;
 }
 
 /* Navigation menu styling */
@@ -53,7 +57,7 @@ nav li {
 /* Centered horizontal navigation buttons */
 nav a {
     text-align: center;
-    padding: 14px 40px;
+    padding: 14px 30px;
     text-decoration: none;
     display: inline-block;
     font-size: 14pt;
@@ -101,12 +105,15 @@ h2 {
 }
 /* Special styling for home page text block */
 #home-coding-text {
-    margin: 0px 50px 25px;
+    margin: 24px 50px 25px;
     /* box-sizing: border-box; */
-    background: #6E6658;
-    color:whitesmoke;
-    padding: 2px 15px 2px;
+    /* background: #6E6658; */
+    background: #112d32;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    color:rgba(245, 245, 245, 0.841);
+    padding: 2px 25px 2px;
     border:#112D32 2px solid;
+    opacity: 90%;
 }
 
 /* IMAGE GALLERY - formatting for home/about pages */
@@ -372,12 +379,17 @@ hr {
         
     }
     .page-header {
-        font-size: 34px;
+        font-size: 35px;
         height:fit-content;
+
+    }
+    nav ul {
+        /* width: 100vw; */
     }
     nav a {
-        padding: 10px 20px;
-
+        padding: 12px 10px;
+        
+        font-size: 14px;
     }
 }
 
@@ -398,21 +410,35 @@ hr {
     }
     /* Adjust youtube video player size */
     iframe {
-        max-width: 90%;
+        max-width: 100%;
     }
     /* Switch to vertical nav and condense */
     nav a {
-        float: none;
-        width: 100%;
+        display: block;
+        /* float: none; */
+        /* width: 100%; */
         text-align: center;
-        padding: 0px;
+        padding: 6px;
     }
     /* Adjust about page list to fit */
     #hobby-list {
         width: auto;
     }
+
+    /* Adjust Career page flex layout to 1 column*/
+    .work-experience {
+        display: flex;
+        flex-direction:column;
+    }
+
+    .images-column {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* Adjust dark mode button */
     #toggle-button {
+        top: 8px;
         width: 60px;
         height: auto;
         font-size: 12px;
