@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="./css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Lora">
     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Lora">
+    <!-- Add favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <!-- Link dark mode JS file -->
     <script defer src="./js/dark_mode.js"></script>
-    
+
     <title>Ryan Armstrong | Coursework</title>
 </head>
+
 <body>
     <header>
         <h1 class="page-header">Coursework</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a class="active" href="coursework.html">Coursework</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="random_cat.html">Random Cat</a></li>
-            </ul>
-        </nav>
+
         <!-- DARK MODE TOGGLE -->
         <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
     </header>
-
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="coursework.html">Coursework</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume2.html">Resume</a></li>
+            <li><a href="random_cat.html">Cat of the Day</a></li>
+        </ul>
+    </nav>
     <main>
-
+        
         <!--Table with tabular data for my current BU coursework-->
         <table id="coursework">
-            <caption><h2><b>BU Met Coursework - Ryan Armstrong</b></h2></caption>
-                <thead>
-                    <tr>
-                        <!-- Table header row -->
-                        <th>Course Number</th><th>Description</th><th>Grade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <!-- Table row 1 -->
-                        <td>CS300</td><td>Intro to Software Dev</td><td>B+</td>
-                    </tr>
-                    <tr>
-                        <!-- Table row 2 -->
-                        <td>CS520</td><td>Info Str w/ Java</td><td>A</td>
-                    </tr>
-                    <tr>
-                        <!-- Table row 3 -->
-                        <td>CS526</td><td>Data Struc&Algo</td><td>B</td>
-                    </tr>
-                    <tr>
-                        <!-- Table row 4 -->
-                        <td>CS622</td><td>Adv Prog Tech</td><td>A</td>
-                    </tr>
-                    <tr>
-                        <!-- Table row 5 -->
-                        <td>CS601</td><td>Web App Development</td><td>-</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <!-- Table footer -->
-                        <!--Using colspan to add merge-cell description along table footer-->
-                        <td colspan="3"> * Program started in Fall 22' with 2 term breaks </td>
-                    </tr>
-                </tfoot>
+            <caption>
+                <h2><b>BU Met Coursework - Ryan Armstrong</b></h2>
+            </caption>
+            <thead>
+                <tr>
+                    <!-- Table header row -->
+                    <th>Course Number</th>
+                    <th>Description</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Table row 1 -->
+                    <td>CS300</td>
+                    <td>Intro to Software Dev</td>
+                    <td>B+</td>
+                </tr>
+                <tr>
+                    <!-- Table row 2 -->
+                    <td>CS520</td>
+                    <td>Info Str w/ Java</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <!-- Table row 3 -->
+                    <td>CS526</td>
+                    <td>Data Struc&Algo</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <!-- Table row 4 -->
+                    <td>CS622</td>
+                    <td>Adv Prog Tech</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <!-- Table row 5 -->
+                    <td>CS601</td>
+                    <td>Web App Development</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <!-- Table footer -->
+                    <!--Using colspan to add merge-cell description along table footer-->
+                    <td colspan="3"> * Program started in Fall 22' with 2 term breaks </td>
+                </tr>
+            </tfoot>
         </table>
         <figure>
             <img class="img-center" src="./assets/images/aruba.jpg" alt="Aruba" width="300">
@@ -78,14 +95,21 @@
         </figure>
         <section>
             <!--Symbol entity arrow and adjusting header font size-->
-            <h3 style="font-size: 25px;">What's next &rarr;</h3>
+            <h2 style="text-align: left;">What's next &rarr;</h3>
             
-                <p><b>CS601 Web App Development</b> - exposure to front-end development as it relates
-                    to HTML, CSS, and a focus on JavaScript.
-                </p>
-                <br>
+            <hr>
+
+            <p><b>CS601 Web App Development</b> - building core competencies in web design and development. Immersion
+                 into HTML, CSS, and JavaScript as well as Fetch and JSON for data transfer.
+            </p>
+            <p><b>CS602 Server-Side Web Development</b> - further my experience with web development
+                and build applications using PHP/MySQL as well as Node.js and MongoDB. </p>
+            <hr>
+            <img id="bu-logo" alt="boston logo" src="./assets/images/Boston-University-Logo-500x281.png" width="450">
+    
         </section>
     </main>
     <footer>&copy; 2023 | Ryan Armstrong</footer>
 </body>
+
 </html>

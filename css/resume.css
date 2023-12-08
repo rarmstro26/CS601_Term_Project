@@ -1,0 +1,141 @@
+
+.resume-head {
+    display: block;
+    text-align: center;
+}
+
+.resume-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.left-column {
+    flex: 3;
+    display: flex; 
+    flex-direction: column;
+}
+
+.right-column {
+    flex: 2; 
+    padding-left: 30px; 
+}
+
+.s1 {
+    color: #567185;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 40pt;
+    padding-top: 8px;
+    text-align: left;
+}
+
+p {
+    color: #231F20;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 11pt;
+    margin: 0;
+    padding-left: 8px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    /* padding: 8px; */
+}
+
+.a,
+a {
+    color: #231F20;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 11pt;
+}
+
+.s2 {
+    color: #5C7085;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 22pt;
+    
+}
+
+.s3 {
+    color: #231F20;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 11pt;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 2px;
+    
+}
+
+.s4 {
+    color: #577086;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 22pt;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+.degrees {
+    padding-left: 24px;
+    font-weight: bold;
+}
+
+/* Solve for specificity issue with applying dark mode to body text for resume page */
+.dark-mode p {
+    background-color: #121212;
+    color: #b2bec8;
+}
+
+#res-email {
+    color: #7e9ab8;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 600px){
+
+.resume-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+hr {
+    display: block;
+    width: 100%;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+.resume-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-column {
+    margin: 10px;
+}
+}

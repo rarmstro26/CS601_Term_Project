@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="./css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
 
@@ -17,81 +19,86 @@
 
     <title>Ryan Armstrong | Portfolio</title>
 </head>
+
 <body>
-    
+
     <!--Index/home page to introduce portfolio site-->
     <header>
         <h1 class="page-header">Ryan Armstrong | Portfolio Site</h1>
 
-        <!--Consistent top list-based navigation across all pages-->
-        <nav>
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="coursework.html">Coursework</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="random_cat.html">Random Cat</a></li>
-            </ul>
-        </nav>
-            <!-- DARK MODE TOGGLE -->
-            <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
+        <!-- DARK MODE TOGGLE -->
+        <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
         <!-- <hr> -->
     </header>
+            <!--Consistent top list-based navigation across all pages-->
+            <nav class="sticky-nav">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="coursework.html">Coursework</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume2.html">Resume</a></li>
+                    <li><a href="random_cat.html">Cat of the Day</a></li>
+                </ul>
+            </nav>
     <main>
         <div class="container">
-        <section>
-            <div class="text-container">
-            
-            <h2>Welcome to my site 👋</h2>
-                <p>Welcome to my portfolio site where I'll tell you a little bit about myself, my professional 
-                    experience, and what I'm working on as I build my developer skillset. Have a look around! 
-                </p>
-            </div>
-            <!--Image gallery for flex behavior and formatting pictures-->
-            <div class="gallery-wrapper">
-                <div class="gallery">
-                    <img src="./assets/images/acadia_lake.png" alt="Bio picture" width="250">
-                </div>
-                <div class="gallery">
-                    <img src="./assets/images/hallo_party.jpg" altwidth="250">
-                </div>
-                <div class="gallery">
-                    <img src="./assets/images/glacier_lunch.jpg" width="250">
-                </div>
-            </div>
-            </div>
-            <!-- Uniquely styled text section for background info -->
-            <div id="home-coding-text">   
-                <p><b>The idea of coding...</b>
-                </p>
-                <p>The idea of coding/programming/software didn’t come to me early. I wasn’t seeking out Leetcode problems
-                     and posting solutions to Stack Overflow as a middle-schooler. My first real-exposure was building a 
-                     very basic calculator in Visual Basic during an intro class they offered at my highschool - I didn’t 
-                     really think about it again until my professional career. I graduated college with a liberal arts degree 
-                     - Psychology - I was drawn to the idea of understanding myself (and others) better. Maybe grad school to 
-                     work towards going into therapy. However, like it does for many, graduation pushed me towards a more 
-                     practical path and I realized my heart wasn’t really in it to pursue more school. </p>
-                <p>As each role in my tech career has taken me closer to the work developers/software engineers
-                    engage with, my interest in their work and the tangible solutions they can create has grown
-                    immensely. My undergrad liberal arts education provided me the opportunity to develop
-                    strong analytical and communication skills, but I am missing the formal logic/math/technical
-                    education that will allow me to pursue my professional interests in development. And that finds me 
-                    back in school over a decade later! </p>
-            </div> 
-
+            <section>
                 <div class="text-container">
-                    <p>Now for some inflight entertainment, one of my all-time favorite skits for you to enjoy...</p>
+
+                    <h2>Welcome to my site 👋</h2>
+                    <p>Welcome to my portfolio site where I'll tell you a little bit about myself, my professional
+                        experience, and what I'm working on as I build my developer skillset. Have a look around!
+                    </p>
                 </div>
-                <div class="media-container">
-                    <!--Embedded Youtube video using inline frame and allowing fullscreen -->
-                    <iframe src="https://www.youtube.com/embed/6v1qNVZmofI?si=pgnXKXrvp2y0MaYa" 
-                    title="YouTube video player" allow="autoplay" allowfullscreen></iframe>
+                <!--Image gallery for flex behavior and formatting pictures-->
+                <div class="gallery-wrapper">
+                    <div class="gallery">
+                        <img src="./assets/images/acadia_lake.png" alt="Bio picture" width="250">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/images/hallo_party.jpg" altwidth="250">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/images/glacier_lunch.jpg" width="250">
+                    </div>
                 </div>
-            </section>
+        </div>
+        <!-- Uniquely styled text section for background info -->
+        <div id="home-coding-text">
+            <p><b>The idea of coding...</b>
+            </p>
+            <p>The idea of coding/programming/software didn’t come to me early. I wasn’t seeking out Leetcode problems
+                and posting solutions to Stack Overflow in middle school 😅. My first real-exposure was building a
+                very basic calculator in Visual Basic during an intro class they offered at my highschool - I didn’t
+                really think about it again until my professional career. I graduated college with a liberal arts degree
+                - Psychology - I was drawn to the idea of understanding myself (and others) better. Maybe grad school to
+                work towards going into therapy. However, like it does for many, graduation pushed me towards a more
+                practical path and I realized my heart wasn’t really in it to pursue more school. </p>
+            <p>As each role in my tech career has taken me closer to the work developers/software engineers
+                engage with, my interest in their work and the tangible solutions they can create has grown
+                immensely. My undergrad liberal arts education provided me the opportunity to develop
+                strong analytical and communication skills, but I am missing the formal logic/math/technical
+                education that will allow me to pursue my professional interests in development. And that finds me
+                back in school over a decade later! </p>
+        </div>
+
+        <div class="text-container">
+            <p>Now for some inflight entertainment, one of my all-time favorite skits for you to enjoy...</p>
+        </div>
+        <div class="media-container">
+            <!--Embedded Youtube video using inline frame and allowing fullscreen -->
+            <iframe src="https://www.youtube.com/embed/6v1qNVZmofI?si=pgnXKXrvp2y0MaYa" title="YouTube video player"
+                allow="autoplay" allowfullscreen></iframe>
+        </div>
+        </section>
         </div>
     </main>
     <footer>&copy; 2023 | Ryan Armstrong</footer>
+    <noscript>
+        <p> JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
+    </noscript>
 </body>
+
 </html>

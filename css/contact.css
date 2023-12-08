@@ -142,17 +142,24 @@ textarea {
     background-color: #64ad1b;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     color: white;
+    transition: 0.2s;
 }
 
 #reset-button:hover {
     background-color: rgb(188, 180, 180);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     color: white;
+    transition: 0.2s;
 }
 
 /* Message text area character counter */
 #char-count {
     text-align: right;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: black;
 }
 
 @media screen and (max-width: 600px){

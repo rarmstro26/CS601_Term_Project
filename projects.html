@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Import fonts -->
+    <link rel="stylesheet" media="screen" href="./css/main.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair">
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <!-- Link to CSS -->
-    <link rel="stylesheet" media="screen" href="./css/main.css">
-    
+
     <!-- Link dark mode JS file -->
     <script defer src="./js/dark_mode.js"></script>
 
-    <!-- Link to JS -->
-    <script defer src="./js/fetch_cat.js"></script>
-
     <title>Ryan Armstrong | Portfolio</title>
 </head>
+
 <body>
-    
+
     <!--Index/home page to introduce portfolio site-->
     <header>
-        <h1 class="page-header">Cat of the Day</h1>
+        <h1 class="page-header">Projects</h1>
 
-        <!-- DARK MODE TOGGLE -->
-        <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
-        
-    </header>
         <!--Consistent top list-based navigation across all pages-->
-        <nav class="sticky-nav">
+        <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="coursework.html">Coursework</a></li>
                 <li><a href="career.html">Career</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="resume2.html">Resume</a></li>
-                <li><a class="active" href="random_cat.html">Cat of the Day</a></li>
+                <li><a href="random_cat.html">Cat of the Day</a></li>
             </ul>
         </nav>
+        <!-- DARK MODE TOGGLE -->
+        <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
+        <!-- <hr> -->
+    </header>
     <main>
-        <h2>Click here to summon a cat!</h2>
+        <h2>School/Personal Projects</h2>
+
+
+
+
+
+
+
+
         
-            <section id="fetch-cat">
-                <!-- Button to allow fetch for cat image -->
-                <button id="cat-button">Random Cat</button>
-                <hr>
-
-                <!-- Placeholder img to display the fetched cat image -->
-                <img id="random-cat" style="display: none;" alt="random cat image">
-
-            </section>
-
     </main>
     <footer>&copy; 2023 | Ryan Armstrong</footer>
+    <noscript>
+        <p> JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
+    </noscript>
 </body>
+
 </html>

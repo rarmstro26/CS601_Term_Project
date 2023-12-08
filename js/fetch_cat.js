@@ -1,7 +1,7 @@
 // Using data from: https://thecatapi.com/
 
 // URL to random cat test API site
-const url = "https://api.thecatapi.com/v1/images/search"
+const url = "https://api.thecatapi.com/v1/images/search?"
 
 // Wait for window load - listen for click here button to launch fetch function
 window.onload = function () {
