@@ -5,14 +5,14 @@ const nameAlphaRegex = /^[A-Za-z]+$/;
 // Define regex pattern for email formatting
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
-document.forms["form-1"].addEventListener("submit", function(event) {
+document.forms["form-1"].addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
     // Access form fields
     const firstName = document.getElementById("firstName");
     const lastName = document.getElementById("lastName");
     const email = document.getElementById("email");
-    const message = document.getElementById("message")
+    const message = document.getElementById("message");
 
     // Get error elements
     const firstNameError = document.getElementById("first-name-error");
@@ -49,7 +49,7 @@ document.forms["form-1"].addEventListener("submit", function(event) {
     } else {
         emailError.textContent = "";
     }
-    
+
     // Message - test for max character limit
     if (message.value.length > 100) {
         messageError.textContent = "Please enter 100 characters or less";
@@ -58,7 +58,7 @@ document.forms["form-1"].addEventListener("submit", function(event) {
     } else {
         messageError.textContent = "";
     }
-
+    // Setup form fields to send as body to Formspree
     if (isValid) {
         // Get form data
         const formData = new FormData();
@@ -75,19 +75,19 @@ document.forms["form-1"].addEventListener("submit", function(event) {
             },
             body: formData
         })
-        .then(response => {
-            if (response.ok) {
-                // Handle successful submission
-                console.log("Form submitted successfully");
-                alert("Thanks for the message!"); 
-            } else {
-                throw new Error("Form submission failed");
-            }
-        })
-        .catch(error => {
-            console.error("Form submission failed:", error);
-            alert("Oops! Something went wrong. Please try again.");
-        });
+            .then(response => {
+                if (response.ok) {
+                    // Handle successful submission
+                    console.log("Form submitted successfully");
+                    alert("Thanks for the message!");
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            })
+            .catch(error => {
+                console.error("Form submission failed:", error);
+                alert("Oops! Something went wrong. Please try again.");
+            });
     }
 }
 );
@@ -95,7 +95,7 @@ document.forms["form-1"].addEventListener("submit", function(event) {
 // Function to test alpha regex pattern for first/last name fields
 function testNameAlphaRegex(name) {
     // Run regex test against first/last name field passed when calling function - return t/f
-    return nameAlphaRegex.test(name)
+    return nameAlphaRegex.test(name);
 }
 
 // Function to test email address pattern
@@ -104,15 +104,16 @@ function testEmailIsValid(email) {
     return emailRegex.test(email);
 }
 
-// Create a 'clear-error' function tied to 'clear form' button to fully reset form
+// Create a 'clear-error' function tied to 'Reset' button to fully reset form
 function clearErrors() {
     document.getElementById("first-name-error").textContent = "";
     document.getElementById("last-name-error").textContent = "";
-    document.getElementById("facilitator-error").textContent = "";
+    document.getElementById("email-error").textContent = "";
+    document.getElementById("char-count").textContent = "0/100";
 }
 // Dynamically count characters entered to text area and display
 function countCharacters(textarea) {
     const charCount = document.getElementById("char-count");
-    charCount.textContent = `${textarea.value.length}/200`;
+    charCount.textContent = `${textarea.value.length}/100`;
 }
 

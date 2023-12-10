@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <!-- Link in CSS styles -->
+
+    <!-- Link to CSS and fonts -->
     <link rel="stylesheet" media="screen" href="./css/main.css">
     <link rel="stylesheet" media="screen" href="./css/contact.css">
-    <!-- Link controller JS file -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+
+    <!-- Link controller JS file for Contact form-->
     <script defer src="./js/contact_form.js"></script>
+
     <!-- Link dark mode JS file -->
     <script defer src="./js/dark_mode.js"></script>
 
     <title>Ryan Armstrong | Contact</title>
 </head>
+
 <body>
     <header>
         <h1 class="page-header">Contact</h1>
-        
 
-            <!-- DARK MODE TOGGLE -->
-            <!-- <button id="toggle-button" onclick="darkMode()">Dark Theme</button> -->
+        <!-- DARK MODE TOGGLE - disabled for Contact page given background image -->
+        <!-- <button id="toggle-button" onclick="darkMode()">Dark Theme</button> -->
     </header>
-    <nav class="sticky-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="coursework.html">Coursework</a></li>
-            <li><a href="career.html">Career</a></li>
-            <li><a class="active" href="contact.html">Contact</a></li>
-            <li><a href="resume2.html">Resume</a></li>
-            <li><a href="random_cat.html">Cat of the Day</a></li>
-        </ul>
-    </nav>
+
+    <!-- Link to Vue component file -->
+    <script src="./js/vue_navigation.js" type="module"></script>
+
+    <!-- Import Vue from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <!-- Vue reausable navigation component -->
+    <div id="app" class="sticky-nav">
+        <navigation current-page="contact.html"></navigation>
+    </div>
+
     <main>
         <section>
-            <h2>How to get in touch</h2> 
-            <!-- <figure>
-                <img src="./assets/images/halloween.jpg" alt="Halloween" width="300">
-                <figcaption><i>Fulfilling our dream of being the spookiest house on the block </i>👻</figcaption>
-            </figure> -->
-            <!-- <hr> -->
+            <h2 style="font-size: 32px; font-style: normal;">Get in touch with me</h2>
 
             <form name="form-1" novalidate>
 
                 <!-- Setup text input section with field validations -->
                 <section class="input-section">
                     <h2 id="input-header">Enter your information:</h2>
-        
+
                     <label for="firstName" class="form-label">Enter your first name:</label><br>
-                    <input type="text" class="input-text" id="firstName" name="firstName" minlength="2" pattern="[A-Za-z]+$"
-                        placeholder="First Name" required>
+                    <input type="text" class="input-text" id="firstName" name="firstName" minlength="2"
+                        pattern="[A-Za-z]+$" placeholder="First Name" required>
                     <div id="first-name-error" class="error-message"></div>
-        
+
                     <label for="lastName" class="form-label">Enter your last name:</label><br>
-                    <input type="text" class="input-text" id="lastName" name="lastName" minlength="2" pattern="[A-Za-z]+$"
-                        placeholder="Last Name" required>
+                    <input type="text" class="input-text" id="lastName" name="lastName" minlength="2"
+                        pattern="[A-Za-z]+$" placeholder="Last Name" required>
                     <div id="last-name-error" class="error-message"></div>
-        
+
                     <label for="email" class="form-label">Enter your email</label><br>
-                    <input type="email" class="input-text" id="email" name="email" 
-                        placeholder="example@gmail.com" required>
+                    <input type="email" class="input-text" id="email" name="email" placeholder="example@gmail.com"
+                        required>
                     <div id="email-error" class="error-message"></div>
-        
+
                 </section>
-        
+
                 <!-- Setup radio buttons section with default selected -->
                 <section class="radio-section">
                     <h2>Reason for contact:</h2>
@@ -77,47 +76,42 @@
                     <input type="radio" name="radioMessage" value="job" checked>Job opportunities <br>
                     <input type="radio" name="radioMessage" value="network">Networking <br>
                     <input type="radio" name="radioMessage" value="feedback">Site feedback <br>
-        
                 </section>
-        
+
                 <!-- Setup check boxes section-->
                 <section class="textarea-section">
                     <h2>Message: </h2>
                     <!-- <p id="checkbox-label">(Select all that apply)</p> -->
                     <!-- Message box -->
-                    
+
                     <textarea rows="5" name="message" id="message" placeholder="Enter your message here"
-                     oninput="countCharacters(this)" required></textarea>
+                        oninput="countCharacters(this)" required></textarea>
                     <!-- Dyanmic char counter -->
                     <div id="char-count">0/100</div>
                     <div id="message-error" class="error-message"></div>
-        
+
                 </section>
-        
+
                 <!-- Setup submit and reset form buttons section -->
                 <section class="button-section">
-        
+
                     <!-- Setup submit form button-->
                     <input type="submit" id="submit-button" name="submitButton" value="Submit">
                     <!-- Setup reset button that will clear form fields + call function to clear error msgs  -->
                     <input type="reset" id="reset-button" name="resetButton" value="Reset" onclick="clearErrors()">
-        
+
                 </section>
             </form>
-                <!--Definition list to display term+description formatted-->
-                <!-- <dl id="contact-list">
-                    <dt>Address:</dt>
-                        <dd>2 Arch St, Dover, NH 03820</dd>
-                
-                    <dt>Phone:</dt>
-                        <dd>603.490.5150</dd> -->
-                    
-                    <!--Link to email within DL-->
-                    <!-- <dt>Email:</dt>
-                        <dd><a href="mailtop:rarmstro@bu.edu">rarmstro@bu.edu</a></dd>
-                </dl> -->
+
         </section>
     </main>
     <footer>&copy; 2023 | Ryan Armstrong</footer>
+
+    <!-- Handle if user has unsopported browser or JS disabled -->
+    <noscript>
+        <p> NOTE: JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
+    </noscript>
+    
 </body>
+
 </html>

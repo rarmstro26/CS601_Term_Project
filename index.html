@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href="./css/main.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair">
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <!-- Import CSS and fonts -->
+    <link rel="stylesheet" media="screen" href="./css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair">
 
     <!-- Link dark mode JS file -->
     <script defer src="./js/dark_mode.js"></script>
@@ -28,42 +28,42 @@
 
         <!-- DARK MODE TOGGLE -->
         <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
-        <!-- <hr> -->
+
     </header>
-            <!--Consistent top list-based navigation across all pages-->
-            <nav class="sticky-nav">
-                <ul>
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="coursework.html">Coursework</a></li>
-                    <li><a href="career.html">Career</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="resume2.html">Resume</a></li>
-                    <li><a href="random_cat.html">Cat of the Day</a></li>
-                </ul>
-            </nav>
+
+    <!-- Link to Vue component file -->
+    <script src="./js/vue_navigation.js" type="module"></script>
+
+    <!-- Import Vue from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <!-- Vue reausable navigation component -->
+    <div id="app" class="sticky-nav">
+        <navigation current-page="index.html"></navigation>
+    </div>
+
     <main>
         <div class="container">
-            <section>
-                <div class="text-container">
 
-                    <h2>Welcome to my site 👋</h2>
-                    <p>Welcome to my portfolio site where I'll tell you a little bit about myself, my professional
-                        experience, and what I'm working on as I build my developer skillset. Have a look around!
-                    </p>
+            <div class="text-container">
+
+                <h2>Welcome to my site 👋</h2>
+                <p>Welcome to my portfolio site where I'll tell you a little bit about myself, my professional
+                    experience, and what I'm working on as I build my developer skillset. Have a look around!
+                </p>
+            </div>
+            <!--Image gallery for flex behavior and formatting pictures-->
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <img src="./assets/images/acadia_lake.png" alt="Acadia nat park" width="250">
                 </div>
-                <!--Image gallery for flex behavior and formatting pictures-->
-                <div class="gallery-wrapper">
-                    <div class="gallery">
-                        <img src="./assets/images/acadia_lake.png" alt="Bio picture" width="250">
-                    </div>
-                    <div class="gallery">
-                        <img src="./assets/images/hallo_party.jpg" altwidth="250">
-                    </div>
-                    <div class="gallery">
-                        <img src="./assets/images/glacier_lunch.jpg" width="250">
-                    </div>
+                <div class="gallery">
+                    <img src="./assets/images/hallo_party.jpg" alt="Halloween party" width="250">
                 </div>
+                <div class="gallery">
+                    <img src="./assets/images/glacier_lunch.jpg" alt="Glacier nat park" width="250">
+                </div>
+            </div>
         </div>
         <!-- Uniquely styled text section for background info -->
         <div id="home-coding-text">
@@ -92,12 +92,13 @@
             <iframe src="https://www.youtube.com/embed/6v1qNVZmofI?si=pgnXKXrvp2y0MaYa" title="YouTube video player"
                 allow="autoplay" allowfullscreen></iframe>
         </div>
-        </section>
-        </div>
+
     </main>
     <footer>&copy; 2023 | Ryan Armstrong</footer>
+
+    <!-- Handle if user has unsupported browser or JS disabled -->
     <noscript>
-        <p> JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
+        <p> NOTE: JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
     </noscript>
 </body>
 

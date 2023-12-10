@@ -19,18 +19,24 @@ function fetchCat() {
         .then((response) => {
             console.log(response.status);
             // Display response status to alert
-            alert(`Fetch returned status code = ${response.status}`);
+            // alert(`Fetch returned status code = ${response.status}`);
             // Return parsed JSON data from response
             return response.json();
         })
         //  Process the returned JSON data and display to DOM
         .then(data => {
             console.log(data);
-            // Access DOM element to display text
+            // Access DOM elements to display text
             let catImg = document.getElementById('random-cat');
+            let catText = document.getElementById('random-cat-text');
             catImg.src = data[0].url;
+
             // Unhide img element and display
             catImg.style.display = "block";
+
+            // Load and dynamically display text and API reference URL
+            catText.innerHTML = `Random cat image from: <a href="https://thecatapi.com/" style="font-style: italic; color: blue;">The Cat API</a>`
+
         })
         // Catch any errors encountered during fetch
         .catch((err) => {

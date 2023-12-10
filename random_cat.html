@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Import fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <!-- Link to CSS -->
+
+    <!-- Link to CSS and fonts-->
     <link rel="stylesheet" media="screen" href="./css/main.css">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+
     <!-- Link dark mode JS file -->
     <script defer src="./js/dark_mode.js"></script>
 
-    <!-- Link to JS -->
+    <!-- Link to fetch JS -->
     <script defer src="./js/fetch_cat.js"></script>
 
     <title>Ryan Armstrong | Portfolio</title>
 </head>
+
 <body>
-    
+
     <!--Index/home page to introduce portfolio site-->
     <header>
         <h1 class="page-header">Cat of the Day</h1>
 
         <!-- DARK MODE TOGGLE -->
         <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
-        
+
     </header>
-        <!--Consistent top list-based navigation across all pages-->
-        <nav class="sticky-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="coursework.html">Coursework</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resume2.html">Resume</a></li>
-                <li><a class="active" href="random_cat.html">Cat of the Day</a></li>
-            </ul>
-        </nav>
+    <!-- Link to Vue component file -->
+    <script src="./js/vue_navigation.js" type="module"></script>
+
+    <!-- Import Vue from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <!-- Vue reausable navigation component -->
+    <div id="app" class="sticky-nav">
+        <navigation current-page="random_cat.html"></navigation>
+    </div>
     <main>
+
         <h2>Click here to summon a cat!</h2>
-        
-            <section id="fetch-cat">
-                <!-- Button to allow fetch for cat image -->
-                <button id="cat-button">Random Cat</button>
-                <hr>
 
-                <!-- Placeholder img to display the fetched cat image -->
-                <img id="random-cat" style="display: none;" alt="random cat image">
+        <section id="fetch-cat">
+            <!-- Button to allow fetch for cat image -->
+            <button id="cat-button">Random Cat</button>
+            <hr>
+            <!-- Placeholder img to display the fetched cat image -->
+            <img id="random-cat" src="./assets/images/greg_gambit.jpg" style="display: none;" alt="random cat image">
 
-            </section>
+            <!-- Placeholder p to display image text and fetch API credit -->
+            <p id="random-cat-text" style="text-align: center; font-style: italic;"></p>
 
+        </section>
     </main>
     <footer>&copy; 2023 | Ryan Armstrong</footer>
+
+    <!-- Handle if user has unsopported browser or JS disabled -->
+    <noscript>
+        <p> NOTE: JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
+    </noscript>
+
 </body>
+
 </html>

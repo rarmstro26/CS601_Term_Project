@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Import stylesheets -->
-    <link rel="stylesheet" media="screen" href="./css/main.css">
-    <!-- Additional stylesheet for resume page -->
-    <link rel="stylesheet" media="screen" href="./css/resume.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair">
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <!-- Import stylesheets and fonts -->
+    <link rel="stylesheet" media="screen" href="./css/main.css">
+    <link rel="stylesheet" media="screen" href="./css/resume.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair">
 
     <!-- Link dark mode JS file -->
     <script defer src="./js/dark_mode.js"></script>
@@ -24,41 +23,38 @@
 </head>
 
 <body>
-
-    <!--Index/home page to introduce portfolio site-->
     <header>
         <h1 class="page-header">Resume</h1>
 
-
         <!-- DARK MODE TOGGLE -->
         <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
-        <!-- <hr> -->
+
     </header>
-        <!--Consistent top list-based navigation across all pages-->
-        <nav class="sticky-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="coursework.html">Coursework</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a class="active" href="resume2.html">Resume</a></li>
-                <li><a href="random_cat.html">Cat of the Day</a></li>
-            </ul>
-        </nav>
+
+    <!-- Link to Vue component file -->
+    <script src="./js/vue_navigation.js" type="module"></script>
+
+    <!-- Import Vue from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <!-- Vue reausable navigation component -->
+    <div id="app" class="sticky-nav">
+        <navigation current-page="resume2.html"></navigation>
+    </div>
+
     <main>
         <section class="resume-head">
             <p class="s1">RYAN ARMSTRONG</p>
             <hr>
             <p>
-                <br />
+                <br>
             </p>
             <p>T | (603) 490-5150</p>
             <p>
                 <a id="res-email" href="mailto:rarmstrong26@gmail.com" target="_blank">E | rarmstrong26@gmail.com</a>
             </p>
             <p>
-                <br />
+                <br>
             </p>
         </section>
         <section class="resume-container">
@@ -102,7 +98,7 @@
                 <p>Performed testing for system upgrades and new functionality implementations for several SaaS
                     applications
                     including Oracle EBS, Documentum, and WorkForce.</p>
-                <p>Tier 2 HR Associate | Oct. 2010 — May 2012</p>
+                <p class="s3">Tier 2 HR Associate | Oct. 2010 — May 2012</p>
                 <p>Responsible for managing complex HR leave cases, becoming proficient with several corporate
                     applications used
                     to manage case work.</p>
@@ -114,12 +110,14 @@
 
             <div class="right-column">
                 <p class="s4">PROFILE</p>
-                <p>Configuration engineer with demonstrated ability to learn and adapt to new technology. Proven
+                <p id="profile-text">Configuration engineer with demonstrated ability to learn and adapt to new
+                    technology. Proven
                     capacity for
-                    high- level collaboration within technical Agile teams while exceling in environments</p>
-                <p>that require autonomy and self-direction. Seeking to build upon foundational knowledge to develop the
-                    technical competencies</p>
-                <p>crucial to succeed in software development.</p>
+                    high- level collaboration within technical Agile teams while exceling in environments
+                    that require autonomy and self-direction. Seeking to build upon foundational knowledge to develop
+                    the
+                    technical competencies
+                    crucial to succeed in software development.</p>
                 <p>
                 </p>
                 <p class="s4">EDUCATION</p>
@@ -133,14 +131,21 @@
 
                 </p>
                 <p class="s4">SOFTWARE</p>
-                <p>Oracle (EBS + Cloud) WalkMe (DAP) ServiceNow</p>
-                <p>Documentum (WebTop) DocuSign</p>
+                <p>Oracle (EBS + Cloud)</p>
+                <p>WalkMe (DAP)</p>
+                <p>ServiceNow (CSM/HRSD) </p>
+                <p>Documentum (WebTop)
+                <p>DocuSign</p>
+                <p>TOAD (SQL)</p>
                 <p>JIRA</p>
                 <p>
 
                 </p>
                 <p class="s4">DISCIPLINES</p>
-                <p>Agile / Waterfall Growth Mindset CI/CD</p>
+                <p>Agile</p>
+                <p>Waterfall</p>
+                <p>Growth Mindset</p>
+                <p>CI/CD</p>
                 <p>Pair Programming</p>
                 <p>
 
@@ -150,14 +155,16 @@
                 <p>Dover, NH, 03820</p>
                 <p>
             </div>
-            <!-- <span>
-                <img width="816" height="941" alt="image" src="Ryan_Armstrong_files/Image_001.png" />
-            </span> -->
-            </p>
 
         </section>
     </main>
     <footer>&copy; 2023 | Ryan Armstrong</footer>
+
+    <!-- Handle if user has unsopported browser or JS disabled -->
+    <noscript>
+        <p> NOTE: JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
+    </noscript>
+
 </body>
 
 </html>

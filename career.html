@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href="./css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Lora">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <!-- Link to CSS and fonts -->
+    <link rel="stylesheet" media="screen" href="./css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Link dark mode JS file -->
     <script defer src="./js/dark_mode.js"></script>
 
     <title>Ryan Armstrong | Career</title>
 </head>
+
 <body>
     <header>
         <h1 class="page-header">Career</h1>
 
-            <!-- DARK MODE TOGGLE -->
-            <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
+        <!-- DARK MODE TOGGLE -->
+        <button id="toggle-button" onclick="darkMode()">Dark Theme</button>
+
     </header>
-    <nav class="sticky-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="coursework.html">Coursework</a></li>
-            <li><a class="active" href="career.html">Career</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="resume2.html">Resume</a></li>
-            <li><a href="random_cat.html">Cat of the Day</a></li>
-        </ul>
-    </nav>
+
+    <!-- Link to Vue component file -->
+    <script src="./js/vue_navigation.js" type="module"></script>
+
+    <!-- Import Vue from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
+    <!-- Vue reausable navigation component -->
+    <div id="app" class="sticky-nav">
+        <navigation current-page="career.html"></navigation>
+    </div>
+
     <main>
         <h2>Work Experience</h2>
         <section class="work-experience">
-            
+
+            <!-- Flex left side images column -->
             <div class="images-column">
                 <img class="img-career" src="./assets/images/lm_career.png" alt="LM logo" width="300">
-                <!-- <figure> -->
-                    <img class="img-career" src="./assets/images/team_logo.png" alt="LM team"  width="300">
-                    <!-- <figcaption>My previous squads logo - focused on corporate apps for talent/employee experience.</figcaption> -->
-                    <div class="desc">My agile teams logo.
-                    </div>
-                    <!-- </figure> -->
+
+                <img class="img-career" src="./assets/images/team_logo.png" alt="LM team" width="300">
+
+                <div class="desc">My agile teams logo.
+                </div>
             </div>
+
+            <!-- Flex right side dynamic text column -->
             <div class="text-column">
-                <p>I have been with Liberty since 2010 and was my first corporate gig after graduating 
-                    college. I started with an entry-level HR role and navigated my way into the tech 
+                <p>I have been with Liberty since 2010 and was my first corporate gig after graduating
+                    college. I started with an entry-level HR role and navigated my way into the tech
                     space soon after in an L1-type support role. I was a liberal arts undergrad so I've
                     had my work cut out for me transitioning to the IT side.
                 </p>
+                <!-- Formatted horizontal divider -->
                 <hr>
-        
                 <p>I have worked adjacent to development teams, in some capacity, for close to 10 years at
                     Liberty Mutual. I’ve worked with a number of enterprise applications in various Systems
                     Analyst and Configuration Engineer roles. Most recently, I’ve been embedded with developers
@@ -62,16 +71,24 @@
                     built/internal applications while providing me considerable exposure to tools and concepts
                     used in the software development ecosystem.
                 </p>
-                    <!--External hyperlink with LinkedIn button-->
-                    <br>
-                    <br>
-                    <p>Check out my <a href="https://www.linkedin.com/in/ryanarmstrong26/">
-                        <button id="linkedin-button">Linked <i class="fa fa-linkedin-square"></i></button></a> for more info.</p>
-            </div> 
+
+                <br>
+                <br>
+                <!--External hyperlink with LinkedIn button-->
+                <p>Check out my profile on <a href="https://www.linkedin.com/in/ryanarmstrong26/"
+                         id="linkedin-button">Linked <i class="fa fa-linkedin-square"></i></a> for more info.</p>
+            </div>
 
         </section>
     </main>
 
     <footer>&copy; 2023 | Ryan Armstrong</footer>
+
+    <!-- Handle if user has unsopported browser or JS disabled -->
+    <noscript>
+        <p> NOTE: JavaScript is disabled in your browser. Please enable for full site-functionality.</p>
+    </noscript>
+
 </body>
+
 </html>

@@ -1,5 +1,9 @@
-p, #hobby-list, #contact-list,figcaption, nav a {
-    font-family:Lora, serif;
+p,
+#hobby-list,
+#contact-list,
+figcaption,
+nav a {
+    font-family: Lora, serif;
     font-size: 18px;
 }
 
@@ -7,23 +11,15 @@ p, #hobby-list, #contact-list,figcaption, nav a {
 body {
     background: #eae7dcb8;
     margin: 0px;
-    /* background: linear-gradient(to right, #eae7dcb8, rgba(217, 213, 203, 0.722) ) */
-    /* background: #d1e8e2; */
-    /* background: #ececec; */
-    /* background: #edeae5; */
 }
+
 /* Enable sticky header/nav behavior */
 header {
-    /* top: 0; */
-    /* position: sticky; */
-    /* z-index: 999; */
-
     /* fix */
     position: relative;
     z-index: 999;
-    
-
 }
+
 /* Add site-wide margin for presentation */
 main {
     margin: 70px;
@@ -37,20 +33,17 @@ main {
 }
 
 /* Style top page h1 header */
-.page-header{
+.page-header {
     font-size: 3em;
     margin: 0;
     background-color: #112D32;
-    padding: 10px; 
+    padding: 10px;
     box-shadow: 0 0 10px black;
     text-align: center;
     font-family: Merriweather, serif;
-    /* font-family: Playfair; */
-    /* font-size: 46px; */
     height: 65px;
-    color:#eae7dcb8;
+    color: #eae7dcb8;
     background: linear-gradient(to right, #112d32, #225a63);
-    
 }
 
 /* Navigation menu styling */
@@ -63,11 +56,6 @@ nav ul {
     border-bottom: 2px ridge black;
     box-shadow: 0 0 10px black;
     text-align: center;
-
-    /* sticky fix */
-    /* position: sticky;
-    top: 0;
-    z-index: 1000; */
 }
 
 /* Set horizontal nav buttons */
@@ -87,35 +75,26 @@ nav a {
 
 /* Button link state formatting */
 a:link {
-    color:#d1d7e0;
-    /* text-decoration:underline; */
-    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  */
-}  
+    color: #d1d7e0;
+}
 
-  a:hover {
-    color:black;
-    /* background-color:#88BDBC; */
-    background-color:#98b4b8;
+a:hover {
+    color: black;
+    background-color: #98b4b8;
     border-radius: 2px;
-    /* font-size: 21px; */
-    /* text-decoration:double; */
-    }
+}
 
-  a:visited {
-    color:#d1d7e0;
+a:visited {
+    color: #d1d7e0;
     text-decoration: none;
-    }
+}
 
-  a.active {
-    /* background-color: #88BDBC; */
+a.active {
     background-color: #98b4b8;
     color: rgb(8, 53, 66);
-    /* font-size:21px; */
     font-weight: bolder;
     border-radius: 2px;
-  }
-
- 
+}
 
 /* Page title h2 header formatting */
 h2 {
@@ -124,22 +103,19 @@ h2 {
     font-style: italic;
     letter-spacing: 1px;
     text-align: center;
-    color:#567185;
+    color: #567185;
 }
+
 /* Special styling for home page text block */
 #home-coding-text {
     margin: 24px 50px 25px;
-    /* box-sizing: border-box; */
-    /* background: #6E6658; */
     background: #112d32;
-    /* font-family:Arial, Helvetica, sans-serif; */
-    color:rgba(245, 245, 245, 0.841);
+    color: rgba(245, 245, 245, 0.841);
     padding: 2px 25px 2px;
-    border:#112D32 2px solid;
+    border: #112D32 2px solid;
     opacity: 90%;
     box-shadow: 0 0 10px black;
     background: linear-gradient(to right, #112d32, #225a63);
-    
 }
 
 /* IMAGE GALLERY - formatting for home/about pages */
@@ -148,40 +124,42 @@ h2 {
     justify-content: center;
 }
 
-  div.gallery {
+div.gallery {
     align-items: center;
     margin: 10px;
     width: 500px;
     transition: width 0.6s;
-  }
-  /* Highlight selected picture */
-  div.gallery:hover {
+}
+
+/* Highlight selected picture */
+div.gallery:hover {
     border: 1px solid #777;
     background-color: #c6dfde;
     color: black;
     width: 525px;
-  }
-  
-  div.gallery img {
+}
+
+div.gallery img {
     width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-  }
-  /* Description text */
-  div.desc {
+}
+
+/* Description text */
+div.desc {
     padding: 10px;
     margin-top: 0;
     text-align: center;
     font-style: italic;
-    font-family:Lora;
-  }
+    font-family: Lora;
+}
 
 /* Image formatting for responsive images */
 img {
     max-width: 100%;
     height: auto;
-    display:inline-block;
+    display: inline-block;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -193,41 +171,42 @@ img {
     margin-right: auto;
     text-align: center;
     padding: 8px;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 }
 
 /* FLEXBOX SETUP FOR CAREER PAGE - 2 column image/text layout */
 .work-experience {
-    display: flex; 
-    align-items: flex-start; 
-  }
-  
-  .images-column {
-    flex: 0 0 auto; 
-    display: flex; 
-    flex-direction: column; 
-  }
-  
-  .text-column {
-    flex: 1; /* Let text column take remaining space */
-    padding-left: 20px; 
-  }
-  
-  .img-career {
+    display: flex;
+    align-items: flex-start;
+}
+
+.images-column {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-column {
+    flex: 1;
+    /* Let text column take remaining space */
+    padding-left: 20px;
+}
+
+.img-career {
     max-width: 100%;
     height: auto;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 16px;
-    margin-bottom: 8px; 
-  }
+    margin-bottom: 8px;
+}
 
 /* Formatting for embedded youtube videos */
 iframe {
     /* Create a container for player */
     border: 4px outset #112D32;
-    border-radius:4px;
-    background-color:#88BDBC;
+    border-radius: 4px;
+    background-color: #88BDBC;
     padding: 5px;
     /* Move style/size from html > css */
     width: 550px;
@@ -236,7 +215,6 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 0 10px black;
-    
 }
 
 /* Format iframe for embedded resume PDF */
@@ -247,14 +225,13 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     border: 2px outset #112D32;
-    border-radius:2px;
-
+    border-radius: 2px;
 }
 
 /* Unique list styling for About page */
 #hobby-list {
-    list-style-type:square;
-    background:#112D32;
+    list-style-type: square;
+    background: #112D32;
     border: none;
     width: 25%;
     border-radius: 5px;
@@ -263,23 +240,23 @@ iframe {
     padding-bottom: 12px;
     color: rgba(245, 245, 245, 0.841);
     background: linear-gradient(to right, #112d32, #225a63);
-    
 }
-
 
 /* Style page breaks Contact page */
 hr {
     border: 10px solid #112D32;
     border-radius: 5px;
     box-shadow: 0 0 4px black;
-    
+
 }
+
 /* Style definition list on Contact page */
 #contact-list dt {
     font-style: italic;
     font-weight: bolder;
 }
-  #contact-list dd {
+
+#contact-list dd {
     padding: 10px;
     text-indent: 28px;
 }
@@ -298,30 +275,30 @@ hr {
     margin-right: auto;
     overflow-x: auto;
     box-shadow: 0 0 4px black;
-
 }
 
-  #coursework td, #coursework th {
+#coursework td,
+#coursework th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
 
 /* Inspired by W3 school advanced table example */
-  #coursework tr:nth-child(even){
+#coursework tr:nth-child(even) {
     background-color: #f2f2f2aa;
 }
-  
-  #coursework tr:hover {
+
+#coursework tr:hover {
     background-color: rgb(187, 179, 167);
 }
 
-  #coursework tfoot {
+#coursework tfoot {
     font-weight: bold;
     font-style: italic;
 }
-  
-  #coursework th {
+
+#coursework th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
@@ -332,29 +309,25 @@ hr {
 
 /* RANDOM CAT - Button/img styling */
 #cat-button {
-    display:block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
-
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    /* top: 120px; */
-    /* right: 8px; */
-    /* margin: 0; */
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(22, 77, 81);
-    color:white;
+    color: white;
     width: auto;
     height: auto;
     padding: 8px;
-    border-style:outset;
+    border-style: outset;
     border-radius: 4px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     cursor: pointer;
 }
 
 #cat-button:hover {
-    background-color:rgb(30, 107, 113);
+    background-color: rgb(30, 107, 113);
 }
 
 #random-cat {
@@ -367,12 +340,13 @@ hr {
 /* Style a button for LinkedIn link on Career page*/
 #linkedin-button {
     color: #0077b5;
-    font-size: 24px;
+    font-size: 22px;
     border: none;
-    background-color: #e9e6e6;
+    background-color: #e9e6e68f;
     border-radius: 5px;
     cursor: pointer;
 }
+
 #linkedin-button:hover {
     background-color: rgb(227, 222, 222);
 }
@@ -386,41 +360,53 @@ hr {
     background-color: #ebeae4b8;
     box-shadow: none;
     height: auto;
-    /* background-image: linear-gradient(to right, #ff0d00, #5b0626); */
-    /* background-color: white; */
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    
 }
 
-/* Styling for dark mode */
+#image-link {
+    color: blue;
+    font-weight: bold;
+
+}
+
+/* Style for the image preview */
+.thumbnail-preview {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+/* Styling for DARK MODE TOGGLE */
 
 #toggle-button {
     /* Change from fixed for absorb - sticky fix */
-    position:absolute;
-    display:inline-block;
-    /* top: 25vh; */
-    /* left: 4vw; */
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    display: inline-block;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     top: 0px;
     right: 0px;
     z-index: 1000;
-    background-color:hsl(39, 10%, 28%);
-    color:#d1d7e0;
+    background-color: hsl(39, 10%, 28%);
+    color: #d1d7e0;
     width: auto;
     height: auto;
     padding: 8px;
-    border-style:outset;
-    /* border-radius: 8px; */
+    border-style: outset;
     border-bottom-left-radius: 8px;
-    font-family:Lora;
+    font-family: Lora;
     font-size: 13px;
     cursor: pointer;
 }
 
 #toggle-button:hover {
-    background-color:#121212;
-    color:#d1d7e0;
+    background-color: #121212;
+    color: #d1d7e0;
+    transition: 0.4s;
 }
+
 .dark-mode {
     background-color: #121212;
     color: white;
@@ -428,54 +414,48 @@ hr {
 
 /* MEDIA QUERIES - BREAKPOINTS */
 /* Small/tablet screen */
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     body {
         /* background-color: rgba(24, 119, 120, 0.942); */
         color: #0e0d0d;
-        
     }
+
     .page-header {
         font-size: 35px;
-        height:fit-content;
+        height: fit-content;
+    }
 
-    }
-    nav ul {
-        /* width: 100vw; */
-    }
     nav a {
         padding: 12px 10px;
-        
         font-size: 14px;
     }
 }
 
 /* Mobile screen */
-@media screen and (max-width: 600px){
-    body {
-        /* background-color: rgb(3, 25, 25); */
-        /* color: white; */
-        /* text-align: center; */
-    }
+@media screen and (max-width: 600px) {
+
     /* Adjust page header size/font */
     .page-header {
         font-size: 20px;
         height: fit-content;
     }
+
     p {
         font-size: 12pt;
     }
+
     /* Adjust youtube video player size */
     iframe {
         max-width: 100%;
     }
+
     /* Switch to vertical nav and condense */
     nav a {
         display: block;
-        /* float: none; */
-        /* width: 100%; */
         text-align: center;
         padding: 6px;
     }
+
     /* Adjust about page list to fit */
     #hobby-list {
         width: auto;
@@ -484,7 +464,7 @@ hr {
     /* Adjust Career page flex layout to 1 column*/
     .work-experience {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
     }
 
     .images-column {
@@ -492,29 +472,25 @@ hr {
         margin-right: auto;
     }
 
-
     /* Adjust dark mode button */
     #toggle-button {
         top: 0px;
         width: 60px;
         height: auto;
         font-size: 11px;
-
     }
 }
 
 /* Site footer styling to match header and top border */
-footer{
+footer {
     border-top: 2px ridge #88BDBC;
     border-top-width: 4px;
-    text-align:center;
+    text-align: center;
     background-color: #112D32;
     padding: 10px;
     height: 50px;
     font-family: Merriweather;
-    /* color: #88BDBC; */
     color: #eae7dcb8;
-    font-weight:bold;
+    font-weight: bold;
     background: linear-gradient(to right, #112d32, #225a63);
 }
-
