@@ -275,6 +275,7 @@ hr {
     margin-right: auto;
     overflow-x: auto;
     box-shadow: 0 0 4px black;
+    margin-bottom: 12px;
 }
 
 #coursework td,
@@ -353,7 +354,7 @@ hr {
 
 #bu-logo {
     display: block;
-    margin-top: 18px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     width: 450px;
@@ -365,20 +366,18 @@ hr {
 #image-link {
     color: blue;
     font-weight: bold;
-
 }
 
 /* Style for the image preview */
-.thumbnail-preview {
-    display: block;
+#thumbnail-preview {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     width: auto;
     height: auto;
     z-index: 1;
+   
 }
-
 /* Styling for DARK MODE TOGGLE */
 
 #toggle-button {

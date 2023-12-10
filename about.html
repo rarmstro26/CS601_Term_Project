@@ -49,28 +49,29 @@
                 My girlfriend and I have 2 cats Greg (the good one) and Gambit (the bad one), a real
 
                 <!-- Dynamic image preview for link text - thumbnail preview -->
-                <a href="https://www.reddit.com/r/ExplainTheJoke/comments/160exoi/whats_the_joke/" id="image-link"
-                    onmouseover="showThumbnail('./assets/images/kika_bouba.jpg')">Kiki - Bouba</a> experience.
+                <a href="https://www.reddit.com/r/ExplainTheJoke/comments/160exoi/whats_the_joke/" target="_blank"
+                    id="image-link" onmouseover="showThumbnail('./assets/images/kika_bouba.jpg')">Kiki - Bouba</a>
+                experience.
 
                 We'll likely add a dog to the mix now that we (finally) have our own yard space to accomodate.
             </p>
             <!-- Setup for image preview for text link -->
             <div class="preview-container">
-                <div class="thumbnail-preview" id="thumbnail-preview"></div>
+                <div id="thumbnail-preview"></div>
             </div>
             <!-- Script for image preview  -->
             <script>
-                // Show the thumbnail when hovering over the link
+                // Show the preview when hovering over the link
                 document.getElementById('image-link').addEventListener('mouseover', function () {
                     let thumbnailPreview = document.getElementById('thumbnail-preview');
-                    thumbnailPreview.innerHTML = `<img src="./assets/images/kika_bouba.jpg" alt="Thumbnail" width="150">`;
+                    thumbnailPreview.innerHTML = `<img src="./assets/images/kika_bouba.jpg" alt="Thumbnail" width="200">`;
                     thumbnailPreview.style.display = 'block';
                 });
                 // Hide the thumbnail when the mouse leaves the link
-                document.getElementById('image-link').addEventListener('mouseout', function () {
-                    let thumbnailPreview = document.getElementById('thumbnail-preview');
-                    thumbnailPreview.style.display = 'none';
-                });
+                // document.getElementById('image-link').addEventListener('mouseout', function () {
+                //     let thumbnailPreview = document.getElementById('thumbnail-preview');
+                //     thumbnailPreview.style.display = 'none';
+                // });
             </script>
 
             <p>Professionally, I've worked in the tech space for about a decade spending my time primarily in
@@ -110,7 +111,7 @@
                     <div class="desc">Greg and Gambit</div>
                 </div>
             </div>
-            
+
         </section>
     </main>
 
