@@ -35,7 +35,8 @@ function fetchCat() {
             catImg.style.display = "block";
 
             // Load and dynamically display text and API reference URL
-            catText.innerHTML = `Random cat image from: <a href="https://thecatapi.com/" style="font-style: italic; color: blue;">The Cat API</a>`
+            catText.innerHTML = `Random cat image from: <a href="https://thecatapi.com/" target="_blank"
+            style="font-style: italic; color: blue;">The Cat API</a>`
 
         })
         // Catch any errors encountered during fetch

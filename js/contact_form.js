@@ -6,7 +6,7 @@ const nameAlphaRegex = /^[A-Za-z]+$/;
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 document.forms["form-1"].addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault(); 
 
     // Access form fields
     const firstName = document.getElementById("firstName");
@@ -80,6 +80,9 @@ document.forms["form-1"].addEventListener("submit", function (event) {
                     // Handle successful submission
                     console.log("Form submitted successfully");
                     alert("Thanks for the message!");
+
+                    // Run reset function to clear form after submission
+                    clearErrors();
                 } else {
                     throw new Error("Form submission failed");
                 }
@@ -105,12 +108,18 @@ function testEmailIsValid(email) {
 }
 
 // Create a 'clear-error' function tied to 'Reset' button to fully reset form
+// Updated to also handle clear on successful submission
 function clearErrors() {
     document.getElementById("first-name-error").textContent = "";
+    document.getElementById("firstName").value = "";
     document.getElementById("last-name-error").textContent = "";
+    document.getElementById("lastName").value = "";
     document.getElementById("email-error").textContent = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
     document.getElementById("char-count").textContent = "0/100";
 }
+
 // Dynamically count characters entered to text area and display
 function countCharacters(textarea) {
     const charCount = document.getElementById("char-count");

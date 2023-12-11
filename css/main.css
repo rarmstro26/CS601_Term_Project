@@ -433,6 +433,9 @@ hr {
 /* Mobile screen */
 @media screen and (max-width: 600px) {
 
+    main {
+        margin: 35px;
+    }
     /* Adjust page header size/font */
     .page-header {
         font-size: 20px;
@@ -454,6 +457,7 @@ hr {
         text-align: center;
         padding: 6px;
     }
+
 
     /* Adjust about page list to fit */
     #hobby-list {
@@ -477,6 +481,17 @@ hr {
         width: 60px;
         height: auto;
         font-size: 11px;
+    }
+
+    #home-coding-text {
+        margin: 2px;
+        /* background: #112d32;
+        color: rgba(245, 245, 245, 0.841); */
+        padding: 8px;
+        /* border: #112D32 2px solid;
+        opacity: 90%;
+        box-shadow: 0 0 10px black;
+        background: linear-gradient(to right, #112d32, #225a63); */
     }
 }
 
