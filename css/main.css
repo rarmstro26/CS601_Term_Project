@@ -267,7 +267,7 @@ hr {
 }
 
 /* Coursework page table design */
-#coursework {
+.coursework {
     border-collapse: collapse;
     width: 85%;
     /* Auto-center table - responsive */
@@ -278,19 +278,19 @@ hr {
     margin-bottom: 12px;
 }
 
-#coursework td,
-#coursework th {
+.coursework td,
+.coursework th {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
 }
 
 /* Inspired by W3 school advanced table example */
-#coursework tr:nth-child(even) {
+.coursework tr:nth-child(even) {
     background-color: #f2f2f2aa;
 }
 
-#coursework tr:hover {
+.coursework tr:hover {
     background-color: rgb(187, 179, 167);
 }
 
@@ -299,7 +299,7 @@ hr {
     font-style: italic;
 }
 
-#coursework th {
+.coursework th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
@@ -376,8 +376,9 @@ hr {
     width: auto;
     height: auto;
     z-index: 1;
-   
+
 }
+
 /* Styling for DARK MODE TOGGLE */
 
 #toggle-button {
@@ -436,6 +437,7 @@ hr {
     main {
         margin: 35px;
     }
+
     /* Adjust page header size/font */
     .page-header {
         font-size: 20px;
@@ -457,7 +459,6 @@ hr {
         text-align: center;
         padding: 6px;
     }
-
 
     /* Adjust about page list to fit */
     #hobby-list {
@@ -485,13 +486,7 @@ hr {
 
     #home-coding-text {
         margin: 2px;
-        /* background: #112d32;
-        color: rgba(245, 245, 245, 0.841); */
         padding: 8px;
-        /* border: #112D32 2px solid;
-        opacity: 90%;
-        box-shadow: 0 0 10px black;
-        background: linear-gradient(to right, #112d32, #225a63); */
     }
 }
 

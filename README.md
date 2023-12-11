@@ -23,6 +23,8 @@ Download and extract 'CS601_Term_Project_Armstrong' which contains files needed 
 | random_cat.html |               |                 |
 | resume2.html    |               |                 |
 
+Github repo: https://github.com/rarmstro26/CS601_Term_Project
+
 ### SUPPORT
 
 Ryan Armstrong rarmstro@bu.edu
