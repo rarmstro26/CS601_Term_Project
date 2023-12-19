@@ -15,9 +15,9 @@ Vue.component('navigation', {
             <li><a :class="{ active: currentPage === 'about.html' }" href="about.html">About</a></li>
             <li><a :class="{ active: currentPage === 'coursework.html' }" href="coursework.html">Coursework</a></li>
             <li><a :class="{ active: currentPage === 'career.html' }" href="career.html">Career</a></li>
-            <li><a :class="{ active: currentPage === 'contact.html' }" href="contact.html">Contact</a></li>
             <li><a :class="{ active: currentPage === 'resume2.html' }" href="resume2.html">Resume</a></li>
             <li><a :class="{ active: currentPage === 'random_cat.html' }" href="random_cat.html">Cat of the Day</a></li>
+            <li><a :class="{ active: currentPage === 'contact.html' }" href="contact.html">Contact</a></li>
         </ul>
     </nav>
         `
